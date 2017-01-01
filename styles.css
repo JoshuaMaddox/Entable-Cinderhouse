@@ -48,7 +48,7 @@ section {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  /*margin: 0.67em 0;*/
 }
 
 /* Grouping content
@@ -473,14 +473,89 @@ html {
 
 body {
   background-color: #333;
+  font-size: 1em;
+  line-height: 1.5;
 }
 /****** //// END GENERAL STYLES //// ******/
 
 
 /****** //// START GRID SYSTEM //// ******/
-.entable-wrapper {
+.entable-main-wrapper {
+  margin: 0 1%; 
+}
+
+.entable-grid-container {
   width: 100%;
-  height: 200px;
+  background-color: blue; /* Delete After Testing */
 }
 /****** //// END GRID SYSTEM //// ******/
+
+
+/****** //// START MEDIA QUERIES //// ******/
+
+@media only screen and (max-width: 999999em) { /* Any Screen Width Great Than 2560 */
+  h1 {
+    color: purple;
+  }
+  body {
+    font-size: 1.4em;
+  }
+}
+
+@media only screen and (max-width: 160em) { /* 2560 px */
+  h1 {
+    color: yellow;
+  }
+  body {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 120em) { /* 1920 px */
+  h1 {
+    color: green;
+  }
+  body {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 85.375em) { /* 1366 px */
+  h1 {
+    color: white;
+  }
+  body {
+    font-size: 1.2em;
+  }
+  .entable-main-wrapper {
+    margin: 0 2%; 
+  }
+}
+
+@media only screen and (max-width: 64em) { /* 1024 px */
+  h1 {
+    color: red;
+  }
+  body {
+    font-size: 1em;
+  }
+  .entable-main-wrapper {
+    margin: 0 3%; 
+  }
+}
+
+@media only screen and (max-width: 48em) { /* 768 px */
+  h1 {
+    color: pink;
+  }
+  body {
+    font-size: 1em;
+  }
+  .entable-main-wrapper {
+    margin: 0 4%; 
+  }
+}
+
+
+/****** //// END MEDIA QUERIES //// ******/
 
