@@ -467,7 +467,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*, 
+*:before, 
+*:after {
   box-sizing: inherit;
 }
 
@@ -481,12 +483,84 @@ body {
 
 /****** //// START GRID SYSTEM //// ******/
 .entable-main-wrapper {
-  margin: 0 1%; 
+  
 }
 
 .entable-grid-container {
   width: 100%;
   background-color: blue; /* Delete After Testing */
+  box-sizing: border-box;
+}
+
+.entable-row:before,
+.entable-row:after {
+  content: '';
+  display: table;
+  clear: both;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.test-color {
+  background-color: grey;
+}
+
+[class*='entable-col-'] {
+  min-height: 1px;
+  float: left;
+  margin-right: .5em;
+  margin-left: .5em;
+  background-color: pink;
+  text-align: center;
+}
+
+.entable-col-1 {
+  width: calc(100% - 1em);
+}
+
+.entable-col-2 {
+  width: calc((100% - 1em * 2) / 2);
+}
+
+.entable-col-3 {
+  width: calc((100% - 1em * 3) / 3);
+}
+
+.entable-col-4 {
+  width: calc((100% - 1em * 4) / 4);
+}
+
+.entable-col-5 {
+  width: calc((100% - 1em * 5) / 5);
+}
+
+.entable-col-6 {
+  width: calc((100% - 1em * 6) / 6);
+}
+
+.entable-col-7 {
+  width: calc((100% - 1em * 7) / 7);
+
+}
+
+.entable-col-8 {
+  width: calc((100% - 1em * 8) / 8);
+}
+
+.entable-col-9 {
+  width: calc((100% - 1em * 9) / 9);
+}
+
+.entable-col-10 {
+  width: calc((100% - 1em * 10) / 10);
+}
+
+.entable-col-11 {
+  width: calc((100% - 1em * 11) / 11);
+}
+
+.entable-col-12 {
+  width: calc((100% - 1em * 12) / 12);
 }
 /****** //// END GRID SYSTEM //// ******/
 
@@ -527,9 +601,6 @@ body {
   body {
     font-size: 1.2em;
   }
-  .entable-main-wrapper {
-    margin: 0 2%; 
-  }
 }
 
 @media only screen and (max-width: 64em) { /* 1024 px */
@@ -539,9 +610,6 @@ body {
   body {
     font-size: 1em;
   }
-  .entable-main-wrapper {
-    margin: 0 3%; 
-  }
 }
 
 @media only screen and (max-width: 48em) { /* 768 px */
@@ -550,9 +618,6 @@ body {
   }
   body {
     font-size: 1em;
-  }
-  .entable-main-wrapper {
-    margin: 0 4%; 
   }
 }
 
